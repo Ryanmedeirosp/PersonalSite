@@ -32,11 +32,13 @@ body {
   font-family: "Inter", sans-serif;
   color: var(--text-color);
   transition: all 2s;
+  height: 100vh;
 }
 
 .container {
   padding: 24px;
-  width: 360px;
+  max-width: 588px;
+  width: 100%;
   margin: 56px auto 0px;
 }
 
@@ -75,16 +77,16 @@ body {
   z-index: 1;
   left: 0;
   transition: all 0.2;
+  animation:voltar-switch 2s ;
 }
 
 .light .switch button{
-  right: 0;
-  left: initial;
+ animation: escorregar-switch 2s forwards;
 }
 
 .switch button:hover{
   cursor: pointer;
-  opacity: 0.7;
+  outline: 8px solid var(--borda) ;
 }
 
 .switch span{
@@ -153,4 +155,30 @@ footer {
   padding: 24px 0;
   text-align: center;
   font-size: 14px;
+}
+
+@media (min-width:700px){
+  :root {--bg-url: url(./assests/bg-desktop.jpg);
+  }
+
+  .light{--bg-url: url(./assests/bg-desktop-light.jpg);
+  }
+}
+
+@keyframes escorregar-switch{
+  from{
+    left: 0;
+  }
+  to{
+    left: 50%;
+  }
+}
+
+@keyframes voltar-switch{
+  from{
+    left: 50%;
+  }
+  to{
+    left: 0;
+  }
 }
