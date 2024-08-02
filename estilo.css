@@ -32,8 +32,8 @@ body {
   font-family: "Inter", sans-serif;
   color: var(--text-color);
   transition: all 2s;
-  height: 100vh;
-  overflow: hidden;
+  height: 1vh;
+ 
 }
 
 .container {
