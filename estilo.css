@@ -33,6 +33,7 @@ body {
   color: var(--text-color);
   transition: all 2s;
   height: 1vh;
+  overflow: auto;
  
 }
 
